@@ -78,7 +78,7 @@ span {
 }
 
 .labels input {
-    width: 230px;
+    width: 100%;
     height: 50px;
     margin: 10px 0;
     padding: 10px;
@@ -88,7 +88,9 @@ span {
     font-size: 1.2rem;
 }
 
-
+.labels label {
+    width: 100%;
+}
 
 .hero_content .radios {
     width: 100%;
@@ -99,6 +101,30 @@ span {
     align-items: start;
 }
 
+.radios .radios_content {
+    width: 48%;
+    height: 100%;
+    display: flex;
+    margin: 0 10px;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.radios_content input {
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.radios_content label {
+    cursor: pointer;
+}
+
 .query_h1 {
     padding: 10px 0;
     font-family: var(--CormorantUpright);
@@ -107,25 +133,13 @@ span {
 }
 
 .radios label {
-    width: 230px;
-    height: 70px;
+    width: 100%;
+    height: 48%;
     display: flex;
     justify-content: start;
     align-items: center;
     padding: 5px;
     margin: 10px 0;
-    border: 1px solid #3b3b3b;
-    border-radius: 8px;
-}
-
-.radios input {
-    margin: 10px 0;
-    border: 1px solid #2f2f2f;
-    cursor: pointer;
-}
-
-.span_id {
-    padding: 0 10px;
 }
 
 .radios1 {
@@ -186,40 +200,49 @@ button:hover {
     color: #fff;
 }
 
+@media screen and (min-width: 320px) {
+
+    .radios .radios_content {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+}
+
 @media screen and (min-width: 375px) {
     .labels input {
-        width: 300px;
+        width: 100%;
     }
 
-    .radios label {
-        width: 300px;
+    .radios .radios_content {
+        width: 100%
     }
 
     .radios1 textarea {
-        width: 300px;
+        width: 100%;
     }
 
     .radios1 button {
-        width: 300px;
+        width: 100%;
     }
     
 }
 
 @media screen and (min-width: 425px) {
     .labels input {
-        width: 350px;
+        width: 100%;
     }
 
     .radios label {
-        width: 350px;
+        width: 100%;
     }
 
     .radios1 textarea {
-        width: 350px;
+        width: 100%;
     }
 
     .radios1 button {
-        width: 350px;
+        width: 100%;
     }
 }
 
@@ -231,12 +254,34 @@ button:hover {
     .labels input {
         width: 100%;
     }
+
+    .hero_content .radios {
+        flex-direction: row;
+    }
+
+    .radios .radios_content {
+        margin: 0 10px;
+    }
+
+    .radios1 textarea {
+        width: 100%;
+    }
+
+    .radios1 .checkbox {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .radios1 button {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 @media screen and (min-width: 1024px) {
 
     .container {
-        height: 130vh;
+        height: 170vh;
     }
 
     .hero_content .h1 h1 {
@@ -251,7 +296,6 @@ button:hover {
 
     .hero_content .radios {
         flex-direction: row;
-        flex-wrap: wrap;
     }
 
     .hero_content .labels {
@@ -266,14 +310,19 @@ button:hover {
         width: 420px;
     }
 
+    .labels label {
+        width: 47%;
+        margin: 0 10px;
+    }
+
     #email {
         width: 860px;
     }
 
-    .radios label {
-        flex-wrap: wrap;
-        width: 860px;
-        height: 50px;
+    .radios .radios_content {
+        flex-wrap: nowrap;
+        width: 48%;
+        height: 100%;
         margin: 10px 10px;
     }
 
@@ -334,6 +383,7 @@ button:hover {
     }
 
     .hero_content .radios {
+        flex-direction: row;
         flex-wrap: nowrap;
         height: 15%;
     }
