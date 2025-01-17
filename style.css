@@ -73,6 +73,10 @@ span {
     font-weight: 500;
 }
 
+.labels label {
+    display: inline-block;
+}
+
 .labels input {
     width: 230px;
     height: 50px;
@@ -216,6 +220,16 @@ button:hover {
 
     .radios1 button {
         width: 350px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .labels label {
+        width: 100%;
+    }
+
+    .labels input {
+        width: 100%;
     }
 }
 
